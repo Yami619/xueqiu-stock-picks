@@ -68,13 +68,16 @@ export default script<State>(async ({cookies, stocks: stockDict} = {}) => {
     latestStocks.map(stock => [stock.symbol, stock.name]),
   );
 
+  const state = {
+    cookies: cookieJar.serializeSync(),
+    stocks: latestStockDict,
+  };
+
   if (!stockDict) {
     console.info(`初始化自选股票列表，共 ${latestStocks.length} 只股票`);
 
     return {
-      state: {
-        stocks: latestStockDict,
-      },
+      state,
     };
   }
 
@@ -125,10 +128,7 @@ ${updates.join('\n')}
 来源：[${screenName} - 雪球](${PAGE_URL})
 `,
     },
-    state: {
-      cookies: cookieJar.serializeSync(),
-      stocks: latestStockDict,
-    },
+    state,
   };
 });
 
