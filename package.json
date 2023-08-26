@@ -1,12 +1,15 @@
 {
   "name": "digshare-script",
   "version": "0.0.0",
+  "type": "module",
   "exports": "./src/script.ts",
   "dss": {
     "schedule": "rate(1d)"
   },
   "dependencies": {
-    "@digshare/script": "0.4"
+    "@digshare/script": "^0.4.8",
+    "@types/tough-cookie": "^4.0.2",
+    "tough-cookie": "^4.1.3"
   },
   "devDependencies": {
     "@types/node": "18",
