@@ -4,7 +4,7 @@
   "type": "module",
   "exports": "./src/script.ts",
   "dss": {
-    "schedule": "rate(1d)"
+    "schedule": "rate(30m)"
   },
   "dependencies": {
     "@digshare/script": "^0.4.8",

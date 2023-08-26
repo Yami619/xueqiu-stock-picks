@@ -2,7 +2,7 @@ import {script} from '@digshare/script';
 
 import {CookieJar} from 'tough-cookie';
 
-const USER_ID = '2864763817';
+const USER_ID = '3079173340';
 
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.203';
@@ -101,8 +101,14 @@ export default script<State>(async ({cookies, stocks: stockDict} = {}) => {
   );
 
   const updates = [
-    ...addedStocks.map(stock => `- + ${stock.name} (${stock.symbol})`),
-    ...removedStocks.map(stock => `- - ${stock.name} (${stock.symbol})`),
+    ...addedStocks.map(
+      stock =>
+        `- + ${stock.name} ([${stock.symbol}](https://xueqiu.com/S/${stock.symbol}))`,
+    ),
+    ...removedStocks.map(
+      stock =>
+        `- - ${stock.name} ([${stock.symbol}](https://xueqiu.com/S/${stock.symbol}))`,
+    ),
   ];
 
   if (updates.length === 0) {
@@ -116,7 +122,7 @@ export default script<State>(async ({cookies, stocks: stockDict} = {}) => {
       content: `\
 ${updates.join('\n')}
 
-[${screenName} - 雪球](${PAGE_URL})
+来源：[${screenName} - 雪球](${PAGE_URL})
 `,
     },
     state: {

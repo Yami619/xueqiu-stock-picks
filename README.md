@@ -1,6 +1,17 @@
-# 盯梢脚本模板
+# 雪球用户自选股票列表更新监控
+
+使用盯梢定时监控雪球用户自选股票列表，当列表发生变化时发送通知。
 
 [脚本文档](https://docs.dingshao.cn/script/getting-started.html)
+
+在 [src/script.ts](src/script.ts) 中可以将 `USER_ID` 修改为想要监控的用户 ID。比如用户页面的链接是 `https://xueqiu.com/u/3079173340`，那么对应的 `USER_ID` 就是 `3079173340`。
+
+修改完成后，在盯梢手机应用创建对应的频道（建议命名为“xxx（雪球）自选股票更新”，方便其他用户搜索），并执行下方命令部署脚本。
+
+```bash
+npm install
+npx dss deploy
+```
 
 ## 安装依赖
 
