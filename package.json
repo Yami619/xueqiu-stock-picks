@@ -7,7 +7,7 @@
     "schedule": "rate(30m)"
   },
   "dependencies": {
-    "@digshare/script": "^0.4.8",
+    "@digshare/script": "^0.4.9",
     "@types/tough-cookie": "^4.0.2",
     "tough-cookie": "^4.1.3"
   },

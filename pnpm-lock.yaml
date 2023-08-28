@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@digshare/script':
-    specifier: ^0.4.8
-    version: 0.4.8(@types/node@18.17.11)(typescript@5.2.2)
+    specifier: ^0.4.9
+    version: 0.4.9(@types/node@18.17.11)(typescript@5.2.2)
   '@types/tough-cookie':
     specifier: ^4.0.2
     version: 4.0.2
@@ -32,8 +32,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.9
     dev: false
 
-  /@digshare/script@0.4.8(@types/node@18.17.11)(typescript@5.2.2):
-    resolution: {integrity: sha512-2rk7GCbxZZ4/N0Q+I26vRocCwH+UDzfimenpkExJSikIhJm3F1w56ihC6MCcvqyE7tQySroo6OwcvQWJfsJZlQ==}
+  /@digshare/script@0.4.9(@types/node@18.17.11)(typescript@5.2.2):
+    resolution: {integrity: sha512-Ecp4C6I5Qpn96nIEjXxNVmtNOXruy3xW2vNCwxn7ogWbShJJaDklCs4yCFNwF+8KORXi6jhtF5oj0YVFnF6QIA==}
     hasBin: true
     dependencies:
       '@oclif/core': 2.11.10(@types/node@18.17.11)(typescript@5.2.2)
